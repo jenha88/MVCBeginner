@@ -18,7 +18,7 @@ namespace MVCBeginner.Controllers
 
             using (var client = new HttpClient())
             {
-                string json = client.GetStringAsync("http://api.chucknorris.io/jokes/random").Result;
+                string json = client.GetStringAsync("https://api.chucknorris.io/jokes/random").Result;
 
                 joke = JsonConvert.DeserializeObject<RandomChuckJoke>(json);
             }
